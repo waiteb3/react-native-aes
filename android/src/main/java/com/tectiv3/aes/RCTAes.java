@@ -78,11 +78,6 @@ public class RCTAes extends ReactContextBaseJavaModule {
         }
     }
 
-    @ReactMethod(isBlockingSynchronousMethod = true)
-    public String pbkdf2Sync(String pwd, String salt, Integer cost, Integer length, String algorithm) throws UnsupportedEncodingException, NoSuchAlgorithmException, InvalidKeySpecException {
-        return pbkdf2(pwd, salt, cost, length, algorithm);
-    }
-
     @ReactMethod
     public void pbkdf2(String pwd, String salt, Integer cost, Integer length, String algorithm, Promise promise) {
         try {

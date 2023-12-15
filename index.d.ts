@@ -3,7 +3,6 @@ declare module 'react-native-aes-crypto' {
     type Algorithms_pbkdf2 = 'sha1' | 'sha256' | 'sha512'
     
     function pbkdf2(password: string, salt: string, cost: number, length: number, algorithm:Algorithms_pbkdf2): Promise<string>
-    function pbkdf2Sync(password: string, salt: string, cost: number, length: number, algorithm:Algorithms_pbkdf2): string
     function encrypt(text: string, key: string, iv: string, algorithm: Algorithms): Promise<string>
     function decrypt(ciphertext: string, key: string, iv: string, algorithm: Algorithms): Promise<string>
     function hmac256(ciphertext: string, key: string): Promise<string>
